@@ -1,17 +1,17 @@
 #include <stdio.h>
 #include <stdlib.h>
-
-// faca um programa que conte de 0 a 10.
+ 
+// faca um programa que conte de 10 a 0.
 
 int main(){
 
-    int i = 0;
+    int i = 10;
 
-    while (i <= 10)
+    while (i >= 0)
     {
         printf("%d \n", i);
 
-        i += 1;
+        i -= 1;
     }
     
     return 0;

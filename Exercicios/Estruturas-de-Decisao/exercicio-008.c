@@ -1,26 +1,47 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-// Faca um programa que leia tres numeros inteiros e imprima se todos eles sao maiores que 10.
+// 
 
 int main(){
 
-    int n1, n2, n3;
+    int n1, n2, opcao, resultado;
 
     printf("\nDigite um numero: ");
     scanf("%d", &n1);
     printf("\nDigite um numero: ");
     scanf("%d", &n2);
-    printf("\nDigite um numero: ");
-    scanf("%d", &n3);
     
+    printf("\n--------MENU--------");
+    printf("\n1 -       para SOMAR");
+    printf("\n2 -    para SUBTRAIR");
+    printf("\n3 - para MULTIPLICAR");
+    printf("\n4 -     para DIVIDIR");
+    printf("\n--------------------\n\n");
+    scanf("%d", &opcao);
 
-    if(n1 > 10 && n2 > 10 && n3 > 10){
-        printf("\n%d %d %d sao maiores que 10.\n\n", n1, n2, n3);
-    }else{
-        printf("\n%d %d %d nao sao todos maiores que 10.\n\n", n1, n2, n3);
-    }
+    switch (opcao)
+    {
+    case 1:
+        printf("\n%d + %d = %d\n\n", n1, n2, n1+n2);
+        break;
     
+    case 2:
+        printf("\n%d - %d = %d\n\n", n1, n2, n1-n2);
+        break;   
+    
+    case 3:
+        printf("\n%d * %d = %d\n\n", n1, n2, n1*n2);
+        break;
+
+    case 4:
+        printf("\n%d / %d = %d\n\n", n1, n2, n1/n2);
+        break;
+    
+    default:
+        printf("Opcao invalida!");
+        break;
+    }
 
     return 0;
 }

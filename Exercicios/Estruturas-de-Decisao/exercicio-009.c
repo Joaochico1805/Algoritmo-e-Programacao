@@ -1,24 +1,21 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <time.h>
 
-// Faca um programa que leia dois numeros inteiros e imprima se pelo menos um deles eh maior que 10.
+// Faca um programa que jogue tres dados e exiba a soma dos valores gerados.
 
 int main(){
 
-    int n1, n2;
+    srand(time(NULL));
 
-    printf("\nDigite um numero: ");
-    scanf("%d", &n1);
-    printf("\nDigite um numero: ");
-    scanf("%d", &n2);
-    
+    int dado1 = (rand() % 6) + 1;
+    int dado2 = (rand() % 6) + 1;
+    int dado3 = (rand() % 6) + 1;
 
-    if(n1 > 10 || n2 > 10){
-        printf("\n%d ou %d eh maior que 10!\n\n", n1, n2);
-    }else{
-        printf("\n%d e %d sao menores que 10!\n\n", n1, n2);
-    }
-    
+    int soma = dado1 + dado2 + dado3;
+
+    printf("\n%d %d %d", dado1, dado2, dado3);
+    printf("\n\nsoma = %d\n\n", soma);
 
     return 0;
 }

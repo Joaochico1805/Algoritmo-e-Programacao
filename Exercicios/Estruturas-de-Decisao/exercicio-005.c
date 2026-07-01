@@ -1,25 +1,24 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-// Faca um programa que leia dois numeros inteiros e imprima na tela qual eh o maior deles ou se sao iguais.
+// Faca um programa que leia tres numeros inteiros e imprima se todos eles sao maiores que 10.
 
 int main(){
 
-    int n1, n2;
+    int n1, n2, n3;
 
     printf("\nDigite um numero: ");
     scanf("%d", &n1);
-    printf("Digite outro numero: ");
+    printf("\nDigite um numero: ");
     scanf("%d", &n2);
-
+    printf("\nDigite um numero: ");
+    scanf("%d", &n3);
     
 
-    if(n1 < n2){
-        printf("\n%d eh menor que %d.\n\n", n1, n2);
-    }else if (n1 == n2){
-        printf("\n%d eh igual a %d.\n\n", n1, n2);
+    if(n1 > 10 && n2 > 10 && n3 > 10){
+        printf("\n%d %d %d sao maiores que 10.\n\n", n1, n2, n3);
     }else{
-        printf("\n%d eh maior que %d.\n\n", n1, n2);
+        printf("\n%d %d %d nao sao todos maiores que 10.\n\n", n1, n2, n3);
     }
     
 
